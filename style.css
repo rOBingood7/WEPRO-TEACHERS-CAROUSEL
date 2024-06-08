@@ -1,0 +1,93 @@
+body {
+    margin: 0 auto;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.slider-container {
+    max-width: 600px;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+}
+
+.caption {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.navigation {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.navigation .prev, .navigation .next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 10px;
+}
+
+.indicators {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color: #333;
+}
+
+.hide {
+    display: none;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
